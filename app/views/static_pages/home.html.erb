@@ -1,6 +1,21 @@
-<h1>Home Page Stuff</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
-
+<% provide(:title, "Home") %>
+<!-- provide function and associate the string 
+	"Home" with the label :title -->
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!-- insert contents of each page into the layout -->
+<title><%= yield(:title) %> | This is where it Starts </title>
+ <%= stylesheet_link_tag    'application', media: 'all',                                       'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %> <!-- prevents malicious web attacks -->
+</head>
+  <body>
+<h1> Home </h1>
 <p> This is just a test. Gotta add some stuff here eventually...but until then,
-	please enjoy <a href="help"/> Help </a> !
-	<a href="about"/> About </a> 
+	please enjoy <br><br><a href="help"/> Help </a> !<br>
+	<br><a href="about"/> About </a> 
+</p>
+
+</body>
+</html>

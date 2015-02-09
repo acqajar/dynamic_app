@@ -1,9 +1,23 @@
-<h1>Help Page Bro</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
-
+<% provide(:title, "Help") %>
+<!-- provide function and associate the string 
+	"Home" with the label :title -->
+<!DOCTYPE html>
+<html>
+  <head>
+<title><%= yield(:title) %> | This is where it Starts </title>
+<%= stylesheet_link_tag    'application', media: 'all',                                       'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %> <!-- prevents malicious web attacks -->
+</head>
+  <body>
+<h1> Help </h1>
 <p>
   This wasn't a lot of fun. What can you do about it? Well...
-  <a href="home">Home</a>.
-  <a href="about"/> About </a> 
-  
+  <br><br><a href="home">Home</a>.<br>
+  <br><a href="about"/> About </a> 
 </p>
+
+</body>
+</html>
+
+

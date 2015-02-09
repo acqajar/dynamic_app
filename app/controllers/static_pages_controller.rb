@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   def help
   end
 
+
+# The error message indicates a missing about action in the Static Pages 
+# controller
   def about
   end
 

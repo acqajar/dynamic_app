@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  root :to => 'static_pages#home'
+
+  # add route to about page
   get 'static_pages/about'
+
   get 'static_pages/help'
 
   # The priority is based upon order of creation: first created -> highest priority.
